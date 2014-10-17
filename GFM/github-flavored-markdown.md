@@ -70,7 +70,7 @@ Optionally, you may “close” atx-style headers. This is purely cosmetic. The 
 
 ## This is an H2 ##
 	
-### This is an H3 ###### (Will break GFM)
+### This is an H3 ######
 
 
 ### 5. BLOCK
