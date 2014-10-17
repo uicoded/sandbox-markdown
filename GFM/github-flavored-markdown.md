@@ -63,24 +63,32 @@ Followed by some text
 ###### Header 6
 Followed by some text
 
+
 Optionally, you may “close” atx-style headers. This is purely cosmetic. The closing hashes don’t even need to match the number of hashes used to open the header.
 
 # This is an H1 #
 
 ## This is an H2 ##
-
-### This is an H3 ######
-
-
+	
+### This is an H3 ###### (Will break GFM)
 
 
-Auto-detected link: http://www.example.com
-
-Some Ignored_multiple_underscore_italics here
+### 5. BLOCK
 
 A line of normal text with `inline code` and *italics*, **strong font**, and even some μ†ℱ ╋ℯ╳╋. Followed by lots of Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id sem purus, eu commodo tortor. Donec malesuada ultricies dolor a eleifend. In hac habitasse platea dictumst. Vivamus a faucibus ligula. Nullam molestie tristique arcu, eu elementum metus ultricies sed. Aenean luctus congue lectus, vitae semper erat rhoncus non. Nulla facilisi.
 
 Followed by another line of normal text with `inline code` and *italics*, **strong font**, and even some μ†ℱ ╋ℯ╳╋. Followed by lots of Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id sem purus, eu commodo tortor. Donec malesuada ultricies dolor a eleifend. In hac habitasse platea dictumst. Vivamus a faucibus ligula. Nullam molestie tristique arcu, eu elementum metus ultricies sed. Aenean luctus congue lectus, vitae semper erat rhoncus non. Nulla facilisi.
+
+
+### EMPHASIS
+
+*single asterisks*
+_single underscores_
+**double asterisks**
+__double underscores__
+
+
+### LINE SEPARATOR
 
 "Line" Separator:
 
@@ -90,84 +98,9 @@ Followed by another line of normal text with `inline code` and *italics*, **stro
 
 ------
 
-|Table Header 1|Table Header 2|
-|--------------|--------------|
-|Content       |Cntent        |
-|Content       |Content       |
-Text right below table
-
-|Table Header 1|Table Header 2|
-|--------------|--------------|
-|Content       |Cntent        |
-|Content       |Content       |
-
-Empty line between table and this text
-
-    def this_is
-      puts "some #{4-space-indent} ruby code"
-    end
-
-<code>
-def this_is
-  puts "some #{code tag} ruby code"
-end
-</code>
-
-<pre>
-def this_is
-  puts "some #{pre tag} ruby code"
-end
-</pre>
-
-```
-def this_is
-  puts "some #{fenced} ruby code"
-end
-```
-
-```ruby
-def this_is
-  puts "some #{colored} ruby code"
-end
-```
-
-```javascript
-var moduleB = (function() {
-	'use strict';
-	var p = 'private';
-	return {
-		name: 'moduleB',
-		toString: function() {
-			return p + ' ' + name;
-		}
-	};
-})();
-```
-
-```css
-@import url(http://fonts.googleapis.com/css?family=Squada+One);
-body{
-  font-family: 'Squada One';
-}
-ul{
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-}
-```
-
-
-```java
-public class HelloWorld
-{
-	public static void main(String[] args) {
-		System.out.println("Hello World!");
-	}
-}
-```
 
 > here is blockquote
+
 
 
 
@@ -216,6 +149,53 @@ Code blocks can be taken a step further by adding syntax highlighting. In your f
 require 'redcarpet'
 markdown = Redcarpet.new("Hello World!")
 puts markdown.to_html
+```
+
+```
+def this_is
+  puts "some #{fenced} ruby code"
+end
+```
+
+```ruby
+def this_is
+  puts "some #{colored} ruby code"
+end
+```
+
+```javascript
+var moduleB = (function() {
+	'use strict';
+	var p = 'private';
+	return {
+		name: 'moduleB',
+		toString: function() {
+			return p + ' ' + name;
+		}
+	};
+})();
+```
+
+```css
+@import url(http://fonts.googleapis.com/css?family=Squada+One);
+body{
+  font-family: 'Squada One';
+}
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+}
+```
+
+```java
+public class HelloWorld
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World!");
+	}
+}
 ```
 
 Github uses [Linguist](https://github.com/github/linguist) to perform language detection and syntax highlighting. You can find out which keywords are valid by perusing the [languages YAML file](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml).
