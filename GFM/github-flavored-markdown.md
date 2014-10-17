@@ -88,6 +88,14 @@ _single underscores_
 __double underscores__
 
 
+### IMAGES
+
+![Alt text](http://1.gravatar.com/avatar/1b628c9a2cb07afb1920de465d108395)
+
+![Alt text](http://1.gravatar.com/avatar/1b628c9a2cb07afb1920de465d108395 "Optional title")
+
+
+
 ### LINE SEPARATOR
 
 "Line" Separator:
