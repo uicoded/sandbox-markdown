@@ -208,6 +208,13 @@ public class HelloWorld
 
 Github uses [Linguist](https://github.com/github/linguist) to perform language detection and syntax highlighting. You can find out which keywords are valid by perusing the [languages YAML file](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml).
 
+Testing fenced blogs together with 4 space indent
+
+    ```javascript
+    function test() {
+      console.log("notice the blank line before this function?");
+    }
+    ```
 
  5. Tables
 
